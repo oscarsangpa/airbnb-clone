@@ -4,8 +4,12 @@ import { useRouter } from 'next/navigation';
 
 function Logo() {
   const router = useRouter();
+
+  const goToMain = () => router.push('/');
+
   return (
     <Image
+      onClick={goToMain}
       alt="Airbnb logo"
       className="hidden md:block cursor-pointer"
       height="100"
